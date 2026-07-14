@@ -1,0 +1,131 @@
+# =========================
+# OS files
+# =========================
+
+.DS_Store
+Thumbs.db
+
+
+# =========================
+# IDE files
+# =========================
+
+.idea/
+.vscode/
+
+
+# =========================
+# Terraform
+# =========================
+
+# Terraform working directory
+.terraform/
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+
+# Terraform plan files
+*.tfplan
+*.plan
+
+# Terraform crash logs
+crash.log
+crash.*.log
+
+# Terraform override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Terraform variable files
+*.tfvars
+*.tfvars.json
+
+# Keep example variable files
+!*.tfvars.example
+
+# Terraform CLI config
+.terraformrc
+terraform.rc
+
+
+# =========================
+# Kubernetes
+# =========================
+
+# Local kube configuration
+.kube/
+
+# Kubernetes secrets
+secret.yaml
+secrets.yaml
+*-secret.yaml
+
+# Generated Kubernetes manifests
+*.generated.yaml
+
+
+# =========================
+# AWS / Cloud Credentials
+# =========================
+
+# AWS credentials
+.aws/
+
+# SSH keys / certificates
+*.pem
+*.key
+*.crt
+
+
+# =========================
+# Environment files
+# =========================
+
+.env
+.env.*
+!.env.example
+
+
+# =========================
+# Logs
+# =========================
+
+*.log
+
+
+# =========================
+# Temporary files
+# =========================
+
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+
+# =========================
+# Build artifacts
+# =========================
+
+dist/
+build/
+coverage/
+
+
+# =========================
+# Docker
+# =========================
+
+.docker/
+
+
+# =========================
+# Local tooling caches
+# =========================
+
+.cache/
+.tmp/

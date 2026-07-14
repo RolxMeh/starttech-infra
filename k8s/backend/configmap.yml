@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-config
+  namespace: starttech
+
+data:
+  NODE_ENV: "production"
+  PORT: "8080"
+  ALLOWED_ORIGINS: "http://localhost:5173,http://localhost:3000"
+  COOKIE_DOMAINS: "localhost,example.com"
+  SECURE_COOKIE: "false"
+  LOG_LEVEL: "DEBUG"
+  LOG_FORMAT: "json"
+  ENABLE_CACHE: "false"
+
+  REDIS_HOST: "starttech-redis.dtn63d.0001.use1.cache.amazonaws.com"
+  REDIS_PORT: "6379"

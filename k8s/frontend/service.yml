@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: much-todo-frontend-service
+  namespace: starttech
+
+spec:
+  selector:
+    app: much-todo-frontend
+
+  ports:
+    - port: 80
+      targetPort: 3000
+
+  type: LoadBalancer
