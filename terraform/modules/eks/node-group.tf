@@ -24,10 +24,10 @@ resource "aws_eks_node_group" "main" {
     max_unavailable = 1
   }
 
-  remote_access {
-    ec2_ssh_key               = aws_key_pair.main.key_name
-    source_security_group_ids = [aws_security_group.ssh.id]
-  }
+  # remote_access {
+  #   ec2_ssh_key               = aws_key_pair.main.key_name
+  #   source_security_group_ids = [aws_security_group.ssh.id]
+  # }
 
   tags = merge(
     local.common_tags,
