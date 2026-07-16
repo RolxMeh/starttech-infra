@@ -26,7 +26,7 @@ spec:
       containers:
         - name: backend
 
-          image: 405872562779.dkr.ecr.us-east-1.amazonaws.com/starttech-backend-api:v2
+          image: 405872562779.dkr.ecr.us-east-1.amazonaws.com/starttech-backend-api:v4
 
           imagePullPolicy: Always
 
@@ -51,14 +51,14 @@ spec:
 
           livenessProbe:
             httpGet:
-              path: /api/ping
+              path: /api/v1/ping
               port: 8080
             initialDelaySeconds: 30
             periodSeconds: 15
 
           readinessProbe:
             httpGet:
-              path: /api/ping
+              path: /api/v1/ping
               port: 8080
             initialDelaySeconds: 10
             periodSeconds: 10
