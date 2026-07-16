@@ -48,7 +48,7 @@ module "eks" {
   max_size       = var.max_size
 
   key_name        = var.key_name
-  public_key_path = var.public_key_path
+  public_key = var.public_key
   my_ip           = var.my_ip
 }
 

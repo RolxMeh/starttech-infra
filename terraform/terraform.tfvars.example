@@ -25,7 +25,6 @@ my_ip = "ip address"
 alb_dns_name = "alb name"
 
 key_name        = "key name"
-public_key_path = "~/.ssh/startuptech-key.pub"
 
 cluster_version = "1.34"
 
