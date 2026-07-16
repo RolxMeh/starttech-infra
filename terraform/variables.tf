@@ -9,10 +9,8 @@ variable "key_name" {
   default     = "starttech-key"
 }
 
-variable "public_key_path" {
-  description = "Path to the public SSH key"
-  type        = string
-  default     = "~/.ssh/id_ed25519.pub"
+variable "public_key" {
+  type = string
 }
 
 variable "cluster_version" {

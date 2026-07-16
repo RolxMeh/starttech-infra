@@ -8,11 +8,6 @@ variable "key_name" {
   type        = string
 }
 
-variable "public_key_path" {
-  description = "Path to the public SSH key"
-  type        = string
-}
-
 variable "cluster_version" {
   description = "Kubernetes version for the EKS cluster"
   type        = string
@@ -66,4 +61,8 @@ variable "min_size" {
 variable "max_size" {
   type    = number
   default = 3
+}
+
+variable "public_key" {
+  type = string
 }

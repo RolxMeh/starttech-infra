@@ -12,8 +12,7 @@ my_ip = "102.88.55.12/32"
 
 alb_dns_name = "k8s-starttec-muchtodo-32256a0e82-2054437049.us-east-1.elb.amazonaws.com"
 
-key_name        = "startuptech-key"
-public_key_path = "~/.ssh/startuptech-key.pub"
+key_name = "startuptech-key"
 
 cluster_version = "1.34"
 
