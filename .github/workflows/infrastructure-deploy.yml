@@ -45,14 +45,9 @@ jobs:
       - name: Terraform Validate
         run: terraform validate
 
-      - name: Debug ALB DNS
-        run: |
-          echo "ALB DNS: '$TF_VAR_alb_dns_name'"
-
       - name: Terraform Plan
         if: github.event_name == 'pull_request'
         run: terraform plan -input=false
-
 
       - name: Terraform Apply
         if: github.event_name == 'push'
