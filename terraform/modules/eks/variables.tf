@@ -1,13 +1,3 @@
-variable "my_ip" {
-  description = "Public IP allowed to SSH into Bastion"
-  type        = string
-}
-
-variable "key_name" {
-  description = "SSH key pair name"
-  type        = string
-}
-
 variable "cluster_version" {
   description = "Kubernetes version for the EKS cluster"
   type        = string
@@ -61,8 +51,4 @@ variable "min_size" {
 variable "max_size" {
   type    = number
   default = 3
-}
-
-variable "public_key" {
-  type = string
 }

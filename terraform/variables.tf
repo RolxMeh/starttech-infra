@@ -1,18 +1,3 @@
-variable "my_ip" {
-  description = "Public IP allowed to SSH into worker nodes"
-  type        = string
-}
-
-variable "key_name" {
-  description = "SSH key pair name"
-  type        = string
-  default     = "starttech-key"
-}
-
-variable "public_key" {
-  type = string
-}
-
 variable "cluster_version" {
   description = "Kubernetes version for the EKS cluster"
   type        = string
@@ -73,7 +58,7 @@ variable "max_size" {
 variable "frontend_bucket_name" {
   description = "Frontend S3 bucket name"
   type        = string
-  default     = "starttech-frontend-ayotunde"
+  default     = "starttech-frontend-bucket-ayotunde"
 }
 
 variable "ecr_repository_name" {
