@@ -46,10 +46,6 @@ module "eks" {
   desired_size   = var.desired_size
   min_size       = var.min_size
   max_size       = var.max_size
-
-  key_name   = var.key_name
-  public_key = var.public_key
-  my_ip      = var.my_ip
 }
 
 module "storage" {
