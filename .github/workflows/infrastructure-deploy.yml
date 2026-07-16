@@ -49,6 +49,10 @@ jobs:
         if: github.event_name == 'pull_request'
         run: terraform plan -input=false
 
+      - name: Debug ALB DNS
+        run: |
+          echo "ALB DNS: '$TF_VAR_alb_dns_name'"
+
       - name: Terraform Apply
         if: github.event_name == 'push'
         run: terraform apply -auto-approve -input=false
