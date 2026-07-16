@@ -86,43 +86,43 @@ resource "aws_vpc_security_group_egress_rule" "nodes_all" {
 }
 
 # SSH SG
-resource "aws_security_group" "ssh" {
-  name        = "${var.cluster_name}-ssh-sg"
-  description = "Allow SSH to EKS worker nodes"
-  vpc_id      = var.vpc_id
-
-  ingress {
-    description = "SSH"
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
-  }
-
-  egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  tags = merge(
-    local.common_tags,
-    {
-      Name = "${var.cluster_name}-ssh-sg"
-    }
-  )
-}
+# resource "aws_security_group" "ssh" {
+#   name        = "${var.cluster_name}-ssh-sg"
+#   description = "Allow SSH to EKS worker nodes"
+#   vpc_id      = var.vpc_id
+#
+#   ingress {
+#     description = "SSH"
+#     from_port   = 22
+#     to_port     = 22
+#     protocol    = "tcp"
+#   }
+#
+#   egress {
+#     from_port   = 0
+#     to_port     = 0
+#     protocol    = "-1"
+#     cidr_blocks = ["0.0.0.0/0"]
+#   }
+#
+#   tags = merge(
+#     local.common_tags,
+#     {
+#       Name = "${var.cluster_name}-ssh-sg"
+#     }
+#   )
+# }
 
 # A rule that accepts SSH from the SSH security group.
-resource "aws_security_group_rule" "ssh_to_nodes" {
-  type = "ingress"
-
-  from_port = 22
-  to_port   = 22
-  protocol  = "tcp"
-
-  security_group_id        = aws_security_group.nodes.id
-  source_security_group_id = aws_security_group.ssh.id
-
-  description = "Allow SSH from SSH security group to worker nodes"
-}
+# resource "aws_security_group_rule" "ssh_to_nodes" {
+#   type = "ingress"
+#
+#   from_port = 22
+#   to_port   = 22
+#   protocol  = "tcp"
+#
+#   security_group_id        = aws_security_group.nodes.id
+#   source_security_group_id = aws_security_group.ssh.id
+#
+#   description = "Allow SSH from SSH security group to worker nodes"
+# }
