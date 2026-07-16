@@ -1,17 +1,17 @@
-# variable "my_ip" {
-#   description = "Public IP allowed to SSH into Bastion"
-#   type        = string
-# }
-#
-# variable "key_name" {
-#   description = "SSH key pair name"
-#   type        = string
-# }
-#
-# variable "public_key_path" {
-#   description = "Path to the public SSH key"
-#   type        = string
-# }
+variable "my_ip" {
+  description = "Public IP allowed to SSH into Bastion"
+  type        = string
+}
+
+variable "key_name" {
+  description = "SSH key pair name"
+  type        = string
+}
+
+variable "public_key_path" {
+  description = "Path to the public SSH key"
+  type        = string
+}
 
 variable "cluster_version" {
   description = "Kubernetes version for the EKS cluster"
