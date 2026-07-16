@@ -18,7 +18,7 @@ data "aws_iam_policy_document" "frontend_bucket_policy" {
     }
 
     condition {
-      test     = "StringEquals"
+      test = "StringEquals"
 
       variable = "AWS:SourceArn"
 

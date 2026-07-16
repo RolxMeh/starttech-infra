@@ -1,19 +1,19 @@
-# variable "my_ip" {
-#   description = "Public IP allowed to SSH into worker nodes"
-#   type        = string
-# }
-#
-# variable "key_name" {
-#   description = "SSH key pair name"
-#   type        = string
-#   default     = "starttech-key"
-# }
-#
-# variable "public_key_path" {
-#   description = "Path to the public SSH key"
-#   type        = string
-#   default     = "~/.ssh/id_ed25519.pub"
-# }
+variable "my_ip" {
+  description = "Public IP allowed to SSH into worker nodes"
+  type        = string
+}
+
+variable "key_name" {
+  description = "SSH key pair name"
+  type        = string
+  default     = "starttech-key"
+}
+
+variable "public_key_path" {
+  description = "Path to the public SSH key"
+  type        = string
+  default     = "~/.ssh/id_ed25519.pub"
+}
 
 variable "cluster_version" {
   description = "Kubernetes version for the EKS cluster"
