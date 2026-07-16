@@ -16,6 +16,7 @@ jobs:
     env:
       TF_VAR_public_key: ${{ secrets.STARTUPTECH_PUBLIC_KEY }}
       TF_VAR_my_ip: ${{ secrets.MY_IP }}
+      TF_VAR_alb_dns_name: ${{ vars.ALB_DNS_NAME }}
 
     defaults:
       run:
