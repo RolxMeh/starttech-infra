@@ -32,7 +32,7 @@ variable "alb_dns_name" {
 
 variable "instance_types" {
   description = "EKS worker node instance types"
-  default = ["t3.small"]
+  default     = ["t3.small"]
 }
 
 variable "desired_size" {
