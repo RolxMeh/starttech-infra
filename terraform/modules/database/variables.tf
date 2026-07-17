@@ -32,5 +32,5 @@ variable "redis_engine_version" {
 variable "redis_node_type" {
   description = "Redis node type"
   type        = string
-  default     = "cache.t3.micro"
+  default     = "cache.t3.small"
 }

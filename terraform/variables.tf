@@ -32,12 +32,7 @@ variable "alb_dns_name" {
 
 variable "instance_types" {
   description = "EKS worker node instance types"
-
-  # NOTE:
-  # Using t3.micro during development because this AWS account
-  # is restricted to Free Tier. Change back to ["t3.medium"]
-  # before final submission to match the assessment requirements.
-  default = ["t3.micro"]
+  default = ["t3.small"]
 }
 
 variable "desired_size" {
