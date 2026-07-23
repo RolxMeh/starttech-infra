@@ -6,15 +6,14 @@ metadata:
   namespace: starttech
 
   annotations:
-    kubernetes.io/ingress.class: alb
-
     alb.ingress.kubernetes.io/scheme: internet-facing
-
     alb.ingress.kubernetes.io/target-type: ip
-
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80}]'
+    alb.ingress.kubernetes.io/subnets: subnet-058d9f20a702b8b01,subnet-0f4c72b298a1649bf
 
 spec:
+  ingressClassName: alb
+
   rules:
     - http:
         paths:
@@ -24,6 +23,5 @@ spec:
             backend:
               service:
                 name: much-todo-backend-service
-
                 port:
                   number: 80
